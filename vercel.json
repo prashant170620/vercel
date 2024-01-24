@@ -20,9 +20,5 @@
       "dest": "/404.html"
     }
   ],
-  "devDependencies": {
-    "@types/node": "^17.0.42",
-    "@vercel/node": "^2.9.6",
-    "express": "^4.17.1"
-  }
+  
 }

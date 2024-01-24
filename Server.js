@@ -38,7 +38,7 @@ app.get('/',(req,res)=>{
         res.redirect('/user/QuizList');
     }
     else{
-        fs.readFile('index.html',(err,data)=>{
+        fs.readFile('./index.html',(err,data)=>{
             if(err){
                 
                 res.send(`<h1>${JSON.stringify(err)}</h1>`)

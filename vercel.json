@@ -3,6 +3,7 @@
   "builds": [
     {
       "src": "Server.js",
+      "use":"@types/node"
     }
   ],
   "routes": [

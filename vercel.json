@@ -11,11 +11,6 @@
       "handle": "filesystem"
     },
     {
-      "src": "/",
-      "status": 200,
-      "dest": "/Server.js"
-    },
-    {
       "src": "/(.*)",
       "status": 404,
       "dest": "/404.html"

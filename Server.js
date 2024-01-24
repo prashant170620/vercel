@@ -40,7 +40,8 @@ app.get('/',(req,res)=>{
     else{
         fs.readFile('index.html',(err,data)=>{
             if(err){
-                res.send('<p>Error occured</p>')
+                
+                res.send(`<h1>${JSON.stringify(err)}</h1>`)
             }
             else{
                 res.send(data.toString());

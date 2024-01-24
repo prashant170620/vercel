@@ -38,10 +38,10 @@ app.get('/',(req,res)=>{
         res.redirect('/user/QuizList');
     }
     else{
+        const files = fs.readdirSync('./');
         fs.readFile('./index.html',(err,data)=>{
-            if(err){
-                
-                res.send(`<h1>${JSON.stringify(err)}</h1>`)
+            if(err){ 
+                res.send(`<h1>${JSON.stringify(err),${files}</h1>`)
             }
             else{
                 res.send(data.toString());

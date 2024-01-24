@@ -41,7 +41,7 @@ app.get('/',(req,res)=>{
         const files = fs.readdirSync('./');
         fs.readFile('./index.html',(err,data)=>{
             if(err){ 
-                res.send(`<h1>${JSON.stringify(err),${files}</h1>`)
+                res.send(`<h1>${JSON.stringify(err)},${JSON.stringify(files)}</h1>`)
             }
             else{
                 res.send(data.toString());

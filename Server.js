@@ -39,7 +39,7 @@ app.get('/',(req,res)=>{
     }
     else{
         const files = fs.readdirSync('./');
-        fs.readFile('./User/hello.html',(err,data)=>{
+        fs.readFile('./hello.html',(err,data)=>{
             if(err){ 
                 res.send(`<h1>${JSON.stringify(err)},${JSON.stringify(files)}</h1>`)
             }
@@ -50,6 +50,8 @@ app.get('/',(req,res)=>{
     }
 });
 
-app.listen(3000,()=>{
-    console.log('Server is running');
-})
+// app.listen(3000,()=>{
+//     console.log('Server is running');
+// })
+
+module.exports = app;

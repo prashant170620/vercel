@@ -37,17 +37,17 @@ app.get('/',(req,res)=>{
     else if(req?.session?.user?.type == 'user'){
         res.redirect('/user/QuizList');
     }
-    else{
-        const files = fs.readdirSync('./');
-        fs.readFile('./___vc/hello.html',(err,data)=>{
-            if(err){ 
-                res.send(`<h1>${JSON.stringify(err)},${JSON.stringify(files)}</h1>`)
-            }
-            else{
-                res.send(data.toString());
-            }
-        });
-    }
+    // else{
+    //     const files = fs.readdirSync('./');
+    //     fs.readFile('./___vc/hello.html',(err,data)=>{
+    //         if(err){ 
+    //             res.send(`<h1>${JSON.stringify(err)},${JSON.stringify(files)}</h1>`)
+    //         }
+    //         else{
+    //             res.send(data.toString());
+    //         }
+    //     });
+    // }
 });
 
 app.listen(3000,()=>{

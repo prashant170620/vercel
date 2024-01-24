@@ -8,16 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "Server.js"
-    },
-    {
       "handle": "filesystem"
     },
     {
       "src": "/",
       "status": 200,
-      "dest": "/hello.html"
+      "dest": "/hello.js"
     },
     {
       "src": "/(.*)",

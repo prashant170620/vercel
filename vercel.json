@@ -13,7 +13,7 @@
     {
       "src": "/",
       "status": 200,
-      "dest": "/hello.html"
+      "dest": "/Server.js"
     },
     {
       "src": "/(.*)",

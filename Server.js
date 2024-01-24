@@ -17,20 +17,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
 
-app.use('/auth',auth);
-app.use('/admin/*',admin);
-app.use('/user/*',Users);
-app.use('/admin',adminQuizRoute);
-app.use('/user',userQuizRouter);
+app.use('api/auth',auth);
+app.use('api/admin/*',admin);
+app.use('api/user/*',Users);
+app.use('api/admin',adminQuizRoute);
+app.use('api/user',userQuizRouter);
 
-app.use('/admin/QuizList',express.static('Admin/QuizList'));
+app.use('api/admin/QuizList',express.static('Admin/QuizList'));
 // app.use('/admin/QuizView',express.static('Admin/QuizView'));
-app.use('/admin/QuizEdit',express.static('Admin/QuizEdit'));
+app.use('api/admin/QuizEdit',express.static('Admin/QuizEdit'));
 
-app.use('/user/QuizList',express.static('User/QuizList'));
-app.use('/user/QuizView',express.static('User/QuizView'));
+app.use('api/user/QuizList',express.static('User/QuizList'));
+app.use('api/user/QuizView',express.static('User/QuizView'));
 
-app.get('/',(req,res)=>{
+app.get('api/',(req,res)=>{
     if(req?.session?.user?.type == 'admin'){
         res.redirect('/admin/QuizList/');
     }
